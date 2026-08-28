@@ -1,0 +1,11 @@
+#VS Code
+.vscode/
+
+#Operating system files
+.DS_Store
+Thumbs.db
+
+#Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*

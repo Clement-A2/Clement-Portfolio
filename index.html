@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portforlio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Clement Asante Yeboah</h1>
+        <p><span id="typed-text"></span><span class="cursor"></span></p>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>
+                Hi, I'm Clement
+            </h2>
+            <img src="images/WIN_20260726_00_01_20_Pro.jpg" alt="my profile_pic">
+            <p>
+                I build modern websites and applications using HTML, CSS, JavaScipt, and Python.
+            </p>
+            <button>View My Projects</button>
+            <button>Contact Me</button>
+            <a href="documents/CLEMENT ASANTE YEBOAH CV.pdf" class="cv-btn" download> Download CV</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>I'm an IT studtent from GCTU. I'm 20 years in age and I have some knowledge and skills in Web Dev., Sofware Analysis, etc</p>
+        <p>Studying the following:</p>
+         <ul>
+            <li class="course">HTML</li>
+            <li class="course">CSS</li>
+            <li class="course">JavaScipt</li>
+            <li class="course">Python</li>
+            <li class="course">Java</li>
+            <li class="course">C++</li>
+         </ul>
+
+         <img src="images/WIN_20260726_00_01_20_Pro.jpg" alt="profile_pic">
+    </section>
+
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScipt</div>
+            <div class="skill">Java(Learning)</div>
+            <div class="skill">Responsive Design</div>
+            <div class="skill">Python</div>
+            <div class="skill">C++</div>
+            <div class="skill">Git</div>
+            <div class="skill">Problem solving</div>
+            <div class="skill">GitHub</div>
+        </div>
+    </section>
+
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide active">
+                <img src="https://picsum.photos/id/1015/800/400" alt="Slide 1">
+                <div class="caption">Open Source Enthusiast</div>
+            </div>
+            <div class="slide">
+                <img src="images/software development image.jpeg" alt="Slide 2">
+                <div class="caption">Python Developer</div>
+            </div>
+            <div class="slide">
+                <img src="images/front_end image.jpeg" alt="Slide 3">
+                <div class="caption">Frontend Developer</div>
+            </div>
+        </div>
+        <button class="prev">⏮</button>
+        <button class="next">⏭</button>
+        <div class="dots"></div>
+    </div>
+
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+        
+        <input type="text" id="searchInput" placeholder="eg. Search: py">
+        <div id="noResults" class="no-results hide">
+            😅😅No projects found matching your search!!
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="javascript">JavaScipt</button>
+            <button class="filter-btn" data-filter="java">Java</button>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-category="python" data-title="student management system">
+
+                <img src="images/Student M.S.jpeg" alt="Student Management System Screenshot" class="project-image">
+                <h2>Student Management System</h2>
+
+                <p>This is a Python project. It is designed such that it Adds Students to Records, View, Delete, update, and summarize student Records. As an Object Oriented Program, it mainly uses classes and objects.</p>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>OOP</span>
+                    <span>CSV</span>
+                </div>
+                <button class="btn view-btn" data-title="Student Management System" data-tech="Built With Python" data-features="CSV storage, Student Statistics, Object-Oriented Programming">
+                    View Details    
+                </button>
+                <a href="#" class="project-btn">View Project</a>
+                <a href="https://github.com/Clement-A2/Student-Management-System" class="project-btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </div>
+            <div class="project-card" data-category="python" data-title="banking system">
+
+                <img src="images/Banking M.S.jpeg" alt="Banking Management System Screenshot" class="project-image">
+                <h2>Banking System</h2>
+
+                <p>This is a Python project. It is designed as any other such program. It helps in adding customers, creating accounts, transaction operations, viewing, deleting and updating neccessary information and also authenticates users and validate user input. As an Object Oriented Program, it mainly uses classes and objects.</p>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>OOP</span>
+                    <span>CSV</span>
+                </div>
+                <button class="btn view-btn" data-title="Banking System" data-tech="Built With Python" data-features="CSV Storage, Customer Management ,Account Management, Transactions, Authentication, Input Validation, Object-Oriented Programming">
+                    View Details
+                </button>
+                <a href="#" class="project-btn">View Project</a>
+                <a href="https://github.com/Clement-A2/Banking-Management-System" class="project-btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </div>
+            <div class="project-card" data-category="python" data-title="inventory management system">
+
+                <img src="images/Inventory M.S.jpeg" alt="Inventory Management System Screenshot" class="project-image">
+                <h2>Inventory Management System</h2>
+
+                <p>A Python-based inventory management system designed to manage products, stock levels, sales, purchases, and inventory records efficiently.</p>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>OOP</span>
+                    <span>CSV</span>
+                    <span>Data Management</span>
+                </div>
+                <button class="btn view-btn" data-title="Inventory Management System" data-tech="Built With Python" data-features="CSV storage, Product Management, Stock Management, Inventory Records, Object-Oriented Programming">
+                    View Details
+                </button>
+                <a href="#" class="project-btn">View Project</a>
+                <a href="https://github.com/Clement-A2/Inventory-Management-System" class="project-btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </div>
+            <div class="project-card" data-category="javascript" data-title="portfolio website">
+                <h2>Portfolio Website</h2>
+
+                <img src="images/Portfolio screenshot.jpeg" alt="Portfolio Website Screenshot" class="project-image">
+                <p>A responsive personal portfolio built to showcase any projects, skills, and development journey using modern frontend techniques.</p>
+
+                <div class="tech-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScipt</span>
+                    <span>Responsive Design</span>
+                </div>
+                <button class="btn view-btn" data-title="Portfolio Website" data-tech="Built With HTML,CSS,JavaScipt" data-features="Responsive Design, Dark mode, Project filtering, Search, Project modal, Image carousel, Typing animation, Scroll-to-Top">
+                    View Details
+                </button>
+                <a href="#" class="project-btn">View Project</a>
+                <a href="#" class="project-btn">View on GitHub</a>
+            </div>
+            <div class="project-card" data-category="python" data-title="expense tracker">
+                <h2>Expense Tracker</h2>
+                
+                <img src="images/" alt="Expense Tracker Screenshot">
+                <p>This is a Python project. It is designed to be user friendly, responsive lets users manipulate their information.  Mainly, it uses dictionaries and lists for operations.</p>
+                <button class="btn view-btn" data-title="Expense Tracker" data-tech="Built With Python" data-features="CSV storage, Expense Statistics, Object-Oriented Programming">
+                    View Details
+                </button>
+
+                <div class="tech-tags">
+                    <span>List Dictionaries</span>
+                    <span>CSV</span>
+                    <span>Data Management</span>
+                </div>
+
+                <a href="#" class="project-btn">View Project</a>
+                <a href="#" class="project-btn">GitHub</a>
+            </div>
+            <div class="project-card" data-category="python" data-title="to do list">
+                <h2>To do List</h2>
+
+                <img src="images/" alt="To Do List Screenshot">
+                <p>This is a Python project. It is designed such that users can add their daily activities as tasks, and manipulate their data. It is user friendly and easy to navigate and coordinate tasks.</p>
+                <button class="btn view-btn" data-title="To Do List" data-tech="Built With Python" data-features="CSV storage, Task Statistics, List dictionaries">
+                    View Details
+                </button>
+
+                <div class="tech-tags">
+                    <span>List Dictionaries</span>
+                    <span>Data Management</span>
+                </div>
+
+                <a href="#" class="project-btn">View Project</a>
+                <a href="#" class="project-btn">GitHub</a>
+            </div>
+        </div>
+    </section>
+    <div class="modal hide" id="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalTech"></p>
+            <p id="modalFeatures"></p>
+        </div>
+        
+    </div>
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Fill the form below to send your request</p>
+        <form id="contactForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="eg. Adjoa Kwahu" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="eg. yeboah@gmail.com" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="eg. build me a food website" >
+
+            <label for="message">Message:</label>
+            <textarea name="message" id="message"></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <button id="theme-btn">🌙Dark Mode</button>
+    <button id="scrollTopBtn" title="Go Up">⬆</button>
+    <div>
+        <p>Scroll down to see the button</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Clement Asante. All rights reserved.</p>
+        <h2>Contact</h2>
+        <p>Email: yeboahclementasante442@gmail.com</p>
+        <p>Phone: +233 55 751 1045</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
