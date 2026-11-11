@@ -22,7 +22,7 @@ scrollBtn.addEventListener("click", () =>{
 
 const phrases =[
     "Aspiring Software Developer",
-    "Python Develper",
+    "Python Developer",
     "Frontend Developer"
 ];
 
@@ -68,7 +68,7 @@ const noResultsMsg = document.getElementById("noResults");
 
 //MODAL ELEMENTS
 const modal = document.getElementById("modal");
-const viewBtns = document.querySelectorAll(".view-btn");
+// const viewBtns = document.querySelectorAll(".view-btn");
 const closeBtn = document.querySelector(".close-btn");
 const modalTitle = document.getElementById("modalTitle");
 const modalTech = document.getElementById("modalTech");
@@ -114,7 +114,10 @@ filterBtns.forEach(btn => {
 });
 
 //Search bar logic
-searchInput.addEventListener("input", filterProjects);
+if (searchInput){
+    searchInput.addEventListener("input", filterProjects);
+}
+//SearchInput.addEventListener("input", filterProjects);
 
 //MODAL FUNCTION
 function openModal(btn){
@@ -132,8 +135,9 @@ function closeModal(){
 
 //Use event delegation so it works on filtered cards too
 document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("view-btn")){
-        openModal(e.target);
+    const viewBtn = e.target.closest(".view-btn");
+    if (viewBtn){
+        openModal(viewBtn);
     }
 });
 
@@ -172,6 +176,8 @@ const dots = document.querySelectorAll(".dot");
 
 //FINCTION TO SHOW SLIDE
 function showSlide(index){
+    if (slides.length === 0) return;
+
     if (index < 0) currentIndex = slides.length - 1;
     else if (index >= slides.length) currentIndex = 0;
     else currentIndex = index;
@@ -222,7 +228,25 @@ function goToSlide(i){
 }
 
 const contactForm = document.getElementById("contactForm");
+const contact = document.getElementById("contact");
+const contactBtn = document.getElementById("contact-btn");
+const cancelBtn = document.getElementById("cancelBtn");
 const formMessage = document.getElementById("formMessage");
+
+contactBtn.addEventListener("click", function() {
+
+    contactForm.style.display = "flex";
+
+    document.getElementById("contact").classList.add("show");
+    document.body.style.overflow = "hidden"; // Prevent scrolling when the form is open
+});
+
+// 2. When "Cancel" button is clicked, hide the form
+cancelBtn.addEventListener("click", function() {
+    contactForm.style.display = "none";
+    document.getElementById("contact").classList.remove("show");
+    document.body.style.overflow = "auto"; // Allow scrolling when the form is closed
+});
 
 contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -232,9 +256,9 @@ contactForm.addEventListener("submit", function (e) {
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !subject) {
         formMessage.textContent =
-            "Please fill in your name, email and message.";
+            "Please fill in all fields.";
 
         formMessage.className = "error";
         return;
@@ -245,5 +269,25 @@ contactForm.addEventListener("submit", function (e) {
 
     formMessage.className = "success";
 
+    contactForm.style.display = "none";
+    document.getElementById("contact").classList.remove("show");
+    document.body.style.overflow = "auto"; // Allow scrolling when the form is closed
+
     contactForm.reset();
 });
+
+contact.addEventListener("click", function (e) {
+    if (e.target === contact) {
+        contact.style.display = "none";
+        document.getElementById("contact").classList.remove("show");
+        document.body.style.overflow = "auto"; // Allow scrolling when the form is closed
+    }
+});
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && contact.classList.contains("show")) {
+        contactForm.style.display = "none";
+        contact.classList.remove("show");
+        document.body.style.overflow = "auto";
+    }
+});0
